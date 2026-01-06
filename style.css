@@ -97,3 +97,16 @@ nav a {
 .contact-card.whatsapp span {
   color: white;
 }
+
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  padding-bottom: 4px;
+}
+
+/* Highlight active page */
+nav a.active {
+  border-bottom: 3px solid #ffd32a;
+  font-weight: bold;
+}

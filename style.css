@@ -29,6 +29,45 @@ nav a {
   text-decoration: none;
 }
 
+nav a {
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+  padding-bottom: 4px;
+  position: relative;
+  transition: color 0.3s ease;
+}
+
+/* Hover effect */
+nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 3px;
+  background: #ffd32a;
+  transition: width 0.3s ease;
+}
+
+nav a:hover {
+  color: #ffd32a;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* Active page stays highlighted */
+nav a.active {
+  color: #ffd32a;
+  font-weight: bold;
+}
+
+nav a.active::after {
+  width: 100%;
+}
+
 .hero {
   background: #1e90ff;
   color: white;
@@ -109,4 +148,28 @@ nav a {
 nav a.active {
   border-bottom: 3px solid #ffd32a;
   font-weight: bold;
+}
+
+/* Service card animation */
+.service-box {
+  background: white;
+  padding: 15px;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Hover effect */
+.service-box:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+/* Image animation */
+.service-box img {
+  transition: transform 0.4s ease;
+}
+
+.service-box:hover img {
+  transform: scale(1.05);
 }
